@@ -1,0 +1,10 @@
+.git
+.github
+tests/
+composer.phar
+composer.bat
+Dockerfile
+render.yaml
+*.zip
+*.log
+scratch/

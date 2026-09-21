@@ -8,6 +8,9 @@
  *  - Aadhaar Act 2016 / UIDAI Aadhaar Data Vault guidelines
  */
 
+// Ensure PHP 8.5 deprecation notices and notices do not corrupt HTTP/JSON responses
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
+
 // 1. Enforce Statutory Government HTTP Security Headers
 function apply_government_security_headers() {
     if (headers_sent()) return;

@@ -8,6 +8,8 @@
  * and raw .php files are NEVER served as binary downloads.
  */
 
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
+
 $rawUri = $_SERVER['REQUEST_URI'] ?? '/';
 $parsedPath = parse_url($rawUri, PHP_URL_PATH) ?: '/';
 $clean = trim($parsedPath, '/');
